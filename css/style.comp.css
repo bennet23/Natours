@@ -54,13 +54,14 @@ they are defined based on the users we font size which is 16px by default
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
-  @media only screen and (max-width: 75em) {
-    html {
-      font-size: 56.25%; } }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
   @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
   @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
@@ -818,10 +819,10 @@ body {
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.01)), url(../img/hero.jpg); } }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 75em) {
     .header {
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 85vh);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 85vh); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -920,10 +921,10 @@ body {
   color: #55c57a;
   transform: translateX(1rem); }
 
-.navigation__checkbox:checked ~ .navigation__background {
+.navigation__checkbox--checked ~ .navigation__background {
   transform: scale(80); }
 
-.navigation__checkbox:checked ~ .navigation__nav {
+.navigation__checkbox--checked ~ .navigation__nav {
   opacity: 1;
   width: 100%; }
 
@@ -951,14 +952,14 @@ body {
 .navigation__button:hover .navigation__icon::after {
   top: 1rem; }
 
-.navigation__checkbox:checked + .navigation__button .navigation__icon {
+.navigation__checkbox--checked + .navigation__button .navigation__icon {
   background-color: transparent; }
 
-.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+.navigation__checkbox--checked + .navigation__button .navigation__icon::before {
   top: 0;
   transform: rotate(135deg); }
 
-.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+.navigation__checkbox--checked + .navigation__button .navigation__icon::after {
   top: 0;
   transform: rotate(-135deg); }
 
